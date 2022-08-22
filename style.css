@@ -1,0 +1,184 @@
+:root {
+    --red: #ed4c67;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto", sans-serif;
+    text-transform: uppercase;
+    transition: all .2s;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* header */
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1000;
+    display: none;
+}
+
+header nav.active {
+    display: block;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    list-style: none;
+    height: 100%;
+}
+
+header nav ul li {
+    margin: 2rem 0;
+    animation: navbar .5s linear backwards;
+}
+
+header nav ul li:nth-child(1) {
+    animation-delay: .2s;
+}
+
+header nav ul li:nth-child(2) {
+    animation-delay: .4s;
+}
+
+header nav ul li:nth-child(3) {
+    animation-delay: .6s;
+}
+
+header nav ul li:nth-child(4) {
+    animation-delay: .8s;
+}
+
+header nav ul li:nth-child(5) {
+    animation-delay: 1s;
+}
+
+@keyframes navbar {
+    0% {
+        transform: translateY(-100rem);
+    }
+}
+
+header nav ul li a {
+    background: var(--red);
+    font-size: 3rem;
+    display: block;
+    height: 5rem;
+    line-height: 5rem;
+    width: 40rem;
+    border-radius: 5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+    letter-spacing: 1rem;
+}
+
+header .toggle {
+    z-index: 1000;
+    position: fixed;
+    top: 4rem;
+    left: 7rem;
+    color: var(--red);
+    cursor: pointer;
+    font-size: 4rem;
+}
+
+/* home */
+#home {
+    height: 100vh;
+    width: 100vw;
+    /* background: url("img/undraw_Woman_re_afr8.png") no-repeat; */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#home .image {
+    position: absolute;
+    top: 8%;
+    right: 10%;
+}
+
+#home .content {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    height: 100%;
+    width: 40vw;
+    z-index: 500;
+}
+
+#home .content h1,
+#home .content h2 {
+    font-size: 8rem;
+    color: var(--red);
+}
+
+#home .content h1 {
+    font-weight: bold;
+}
+
+#home .content h2 {
+    font-weight: lighter;
+}
+#home .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+}
+#home .content button {
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    background-color: var(--red);
+    color: #fff;
+    cursor: pointer;
+    margin: 2rem 0;
+    height: 4rem;
+    width: 18rem;
+}
+#home .content button:hover {
+    letter-spacing: .2rem;
+}
+#home .content .icons {
+    margin-top: 7rem;
+}
+#home .content .icons a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 5rem;
+    background-color: var(--red);
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+#home .content .icons a:hover {
+    background-color: #fff;
+    color: var(--red);
+}
+#home .image img {
+    width: 50vw;
+}
